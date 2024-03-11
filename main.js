@@ -3,8 +3,6 @@ function randomDice(){
     return Math.floor(number)
 }
 
-//Programa Principal
-
 d1 = randomDice();
 d2 = randomDice();
 
@@ -16,6 +14,8 @@ let p2 = document.querySelector(".img2").setAttribute("src", pathPlayerTwo);
 
 if( d1 > d2){
     document.querySelector("h1").textContent = "🚩Player 1 Wins!";
-}else{
+}else if(d2 > d1){
     document.querySelector("h1").textContent = "Player 2 Wins! 🚩";
+}else{
+    document.querySelector("h1").textContent = "Draw";
 }
